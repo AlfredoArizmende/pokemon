@@ -14,7 +14,7 @@ const cleanArray = (array) => {
             height: element.height,
             weight: element.weight,
             image: element.sprites.other.home.front_default,
-            types: element.types.map(type => type.type.name),
+            Types: element.types.map(type => ({name: type.type.name})),
             created: false
         }
     });
@@ -122,11 +122,11 @@ const getPokemonByName = async (name) => {
 }
 
 
-const createPokemon = async (name, image, hp, attack, defense, speed, height, weight, type) => {
+const createPokemon = async (name, image, hp, attack, defense, speed, height, weight, types) => {
     const newPokemon = await Pokemon.create({ name, image, hp, attack, defense, speed, height, weight });
 
     const pokemonType = await Type.findAll({
-        where: { name: type}
+        where: { name: types}
     });
 
     newPokemon.addType(pokemonType);
