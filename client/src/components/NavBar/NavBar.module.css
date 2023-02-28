@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00173e;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.logoPokemon {
+    width: 140px;
+}
+
+.menu {
+    position: relative;
+    text-decoration: none;
+    color: #a0a0a0;
+    font-size: 1.3em;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.menu:hover {
+    color: white;
+}
+
+.menu:after {
+    content: '';
+    position: absolute;
+    background-color: #f42;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: .3s;
+}
+
+.menu:hover:after {
+    width: 100%;
+}

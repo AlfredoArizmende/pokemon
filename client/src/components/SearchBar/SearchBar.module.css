@@ -1,0 +1,30 @@
+.bar {
+    display: flex;
+    align-items: center;
+}
+
+.barInput {
+    background-color: white;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    color: #000000;
+    padding: .8em 1.8em;
+    border-radius: 1.5em 0 0 1.5em;
+}
+
+.btnSearch {
+    color: #ffffff;
+    border-radius: 0 1.5em 1.5em 0;
+    background-color: #27a0ff;
+    cursor: pointer;
+    padding: .8em 1.8em;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+}
+
+.btnSearch:hover {
+    background-color: #f42;
+}

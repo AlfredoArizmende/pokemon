@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.containerFilters {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.selectBox {
+    color: white;
+    background-color: #27a0ff;
+    font-size: 1.2em;
+    padding: 0.2em;
+    border-right: 10px solid #27a0ff;
+    border-radius: .8em;
+    margin: 0 1em;
+}
+
+.btnAllPokemon {
+    font-size: 1.2em;
+    background-color: #27a0ff;
+    color: white;
+    border-radius: 50px;
+    padding: 0.3em 1em;
+}
+
+.btnAllPokemon:hover {
+    background-color: #f42;
+    cursor: pointer;
+}
+

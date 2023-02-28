@@ -1,0 +1,1135 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .6em .6em;
+}
+
+.perspective {
+    perspective: 1000px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.headerPokemon {
+    position: absolute;
+    width: 280px;
+    z-index: 3;
+    bottom: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: calc((350px - 280px) / 2);
+}
+
+.name h2 {
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.attackPokemon h6 {
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.idPokemon {
+    position: absolute;
+    z-index: 3;
+    bottom: 18%;
+    background-image: linear-gradient(rgb(255, 196, 0), rgb(255, 223, 118));
+    height: 1em;
+    width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3em;
+    margin-left: calc((350px - 290px) / 2);
+}
+
+.idPokemon h3 {
+    font-size: .7em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.typesContainer {
+    position: absolute;
+    z-index: 3;
+    bottom: 7%;
+    margin-left: calc((350px - 280px) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+}
+
+.typesPokemon {
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #f42;
+    border-radius: .5em;
+    height: 2em;
+    width: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1em solid rgba(0,0,0,.2);
+    margin: 0 .2em;
+}
+
+.bgCard {
+    height: 460px;
+    width: 350px;
+    border-radius: 5%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.bgCard::before {
+    content: "";
+    height: 440px;
+    width: 330px;
+    border-radius: 5%;
+    position: absolute;
+    z-index: 1;
+    margin-left: calc((350px - 330px) / 2);
+}
+
+.bgCard::after {
+    content: "";
+    position: absolute;
+    height: 580px;
+    width: 100px;
+    margin-left: calc((350px - 100px) / 2);
+    animation: rotate 2s linear infinite;
+    visibility: hidden;
+}
+
+.bgCardGif {
+    height: 440px;
+    width: 330px;
+    border-radius: 5%;
+    position: absolute;
+    z-index: 1;
+    margin-left: calc((350px - 330px) / 2);
+    visibility: hidden;
+}
+
+.typeImage {
+    height: 38px;
+    width: 38px;
+    border: .2em solid white;
+    border-radius: 50%;
+}
+
+.imagePokemon {
+    height: 280px;
+    width: 280px;
+    z-index: 2;
+    position: absolute;
+    margin-left: calc((350px - 295px) / 2);
+    top: 13%;
+}
+
+/********************************/
+/** CSS for fire type pokemons **/
+/********************************/
+.fireBgCard {
+    background-color: #ffe659;
+}
+
+.fireBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.fireBgCard::before {
+    background-image: url(https://img.freepik.com/free-vector/grunge-diagonal-stripe-background_1409-1366.jpg);
+    background-size: cover;
+}
+
+.fireBgCard::after {
+    background-image: linear-gradient(black, red);
+}
+
+.perspective:hover .fireBgCard::after {
+    visibility: visible;
+}
+
+.fireBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .fireBgCardGif {
+    visibility: visible;
+}
+
+.fireTypeImage {
+    background-image: url(../../images/fire.PNG);
+    background-size: cover;
+}
+
+.fireImagePokemon {
+    border: .5em solid #ffe659;
+    background-image: url(https://blackrobe.github.io/BFStoryArchive/BFStoryArchive/dungeon_battle_collection/dungeon_battle_10200.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for grass type pokemons **/
+/********************************/
+.grassBgCard {
+    background-color: #5db639;
+}
+
+.grassBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.grassBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/sage-green-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.grassBgCard::after {
+    background-image: linear-gradient(black, green);
+}
+
+.perspective:hover .grassBgCard::after {
+    visibility: visible;
+}
+
+.grassBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .grassBgCardGif {
+    visibility: visible;
+}
+
+.grassTypeImage {
+    background-image: url(../../images/grass.png);
+    background-size: cover;
+}
+
+.grassImagePokemon {
+    border: .5em solid #5db639;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/df0dwcb-c264fc01-23cf-43e7-b42b-2d3a6a6d565c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGYwZHdjYi1jMjY0ZmMwMS0yM2NmLTQzZTctYjQyYi0yZDNhNmE2ZDU2NWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.fSXghpSjeaR409VsfrJnq_dl_imCixcDB_0lmEshSis);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for water type pokemons **/
+/********************************/
+.waterBgCard {
+    background-color: #4a9ff5;
+}
+
+.waterBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.waterBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/sky-blue-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.waterBgCard::after {
+    background-image: linear-gradient(black, #2573c4);
+}
+
+.perspective:hover .waterBgCard::after {
+    visibility: visible;
+}
+
+.waterBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .waterBgCardGif {
+    visibility: visible;
+}
+
+.waterTypeImage {
+    background-image: url(../../images/water.png);
+    background-size: cover;
+}
+
+.waterImagePokemon {
+    border: .5em solid #4a9ff5;
+    background-image: url(https://e0.pxfuel.com/wallpapers/701/64/desktop-wallpaper-anime-ocean-background-pokemon-underwater.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for bug type pokemons **/
+/********************************/
+.bugBgCard {
+    background-color: #ab2;
+}
+
+.bugBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.bugBgCard::before {
+    background-image: url(https://thumbs.dreamstime.com/b/bright-green-texture-background-vector-design-44898823.jpg);
+    background-size: cover;
+}
+
+.bugBgCard::after {
+    background-image: linear-gradient(black, rgb(133, 148, 22));
+}
+
+.perspective:hover .bugBgCard::after {
+    visibility: visible;
+}
+
+.bugBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .bugBgCardGif {
+    visibility: visible;
+}
+
+.bugTypeImage {
+    background-image: url(../../images/bug.png);
+    background-size: cover;
+}
+
+.bugImagePokemon {
+    border: .5em solid #ab2;
+    background-image: url(https://www.bhmpics.com/downloads/pokemon-forest-background/7.1475361156.blazingifrit_zoruaeevee_background.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for normal type pokemons **/
+/********************************/
+.normalBgCard {
+    background-color: #aa9;
+}
+
+.normalBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.normalBgCard::before {
+    background-image: url(https://img.freepik.com/free-vector/clean-minimal-white-stripes-vector-pattern-background_1017-13994.jpg);
+    background-size: cover;
+}
+
+.normalBgCard::after {
+    background-image: linear-gradient(black, rgb(143, 143, 136));
+}
+
+.perspective:hover .normalBgCard::after {
+    visibility: visible;
+}
+
+.normalBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .normalBgCardGif {
+    visibility: visible;
+}
+
+.normalTypeImage {
+    background-image: url(../../images/normal.PNG);
+    background-size: cover;
+}
+
+.normalImagePokemon {
+    border: .5em solid #aa9;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aa15ff7d-d333-4bf9-b115-95e18f63fe91/d8fbmbq-69a1f210-aa05-4a78-8425-4b6b84b9a335.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FhMTVmZjdkLWQzMzMtNGJmOS1iMTE1LTk1ZTE4ZjYzZmU5MVwvZDhmYm1icS02OWExZjIxMC1hYTA1LTRhNzgtODQyNS00YjZiODRiOWEzMzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UwbEhZVcsWv7NAON1L5LhP22kuGx_8G2uqM0oeBNCv4);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for poison type pokemons **/
+/********************************/
+.poisonBgCard {
+    background-color: #a59;
+}
+
+.poisonBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.poisonBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/purple-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.poisonBgCard::after {
+    background-image: linear-gradient(black, rgb(132, 65, 118));
+}
+
+.perspective:hover .poisonBgCard::after {
+    visibility: visible;
+}
+
+.poisonBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .poisonBgCardGif {
+    visibility: visible;
+}
+
+.poisonTypeImage {
+    background-image: url(../../images/poison.PNG);
+    background-size: cover;
+}
+
+.poisonImagePokemon {
+    border: .5em solid #a59;
+    background-image: url(https://i.pinimg.com/474x/ac/72/16/ac72169c6b47da2d3cb49420875293ab.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for electric type pokemons **/
+/********************************/
+.electricBgCard {
+    background-color: #fc3;
+}
+
+.electricBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.electricBgCard::before {
+    background-image: url(https://previews.123rf.com/images/tashechka/tashechka1608/tashechka160800161/61218174-diagonal-stripes-pattern-seamless-texture-background-ideal-for-printing-onto-fabric-and-paper-or-dec.jpg);
+    background-size: cover;
+}
+
+.electricBgCard::after {
+    background-image: linear-gradient(black, rgb(229, 180, 31));
+}
+
+.perspective:hover .electricBgCard::after {
+    visibility: visible;
+}
+
+.electricBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .electricBgCardGif {
+    visibility: visible;
+}
+
+.electricTypeImage {
+    background-image: url(../../images/electric.png);
+    background-size: cover;
+}
+
+.electricImagePokemon {
+    border: .5em solid #fc3;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30751457-a50b-4f4c-a9f2-5a8ee5504f89/d6awe5m-d41ba327-6970-4ab7-8353-6f236d203006.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNzUxNDU3LWE1MGItNGY0Yy1hOWYyLTVhOGVlNTUwNGY4OVwvZDZhd2U1bS1kNDFiYTMyNy02OTcwLTRhYjctODM1My02ZjIzNmQyMDMwMDYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AUmy6I5dg6CxX8xfTeDtVElZ_nv9mn5hbsOsGjl1cUw);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for ground type pokemons **/
+/********************************/
+.groundBgCard {
+    background-color: #db5;
+}
+
+.groundBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.groundBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/brown-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.groundBgCard::after {
+    background-image: linear-gradient(black, rgb(182, 146, 38));
+}
+
+.perspective:hover .groundBgCard::after {
+    visibility: visible;
+}
+
+.groundBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .groundBgCardGif {
+    visibility: visible;
+}
+
+.groundTypeImage {
+    background-image: url(../../images/ground.png);
+    background-size: cover;
+}
+
+.groundImagePokemon {
+    border: .5em solid #db5;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHXqtOXIRcEUqMPc7vajCygraZwm1DgbjOFcMc_fQ-gusqAC-xaam9gUgu2prPkPPEBWo&usqp=CAU);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for fairy type pokemons **/
+/********************************/
+.fairyBgCard {
+    background-color: #e9e;
+}
+
+.fairyBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.fairyBgCard::before {
+    background-image: url(https://previews.123rf.com/images/alena0509/alena05091506/alena0509150600102/41072610-pastel-patr%C3%B3n-rayas-diagonales-en-el-tono-de-color-rosa.jpg);
+    background-size: cover;
+}
+
+.fairyBgCard::after {
+    background-image: linear-gradient(black, rgb(192, 68, 192));
+}
+
+.perspective:hover .fairyBgCard::after {
+    visibility: visible;
+}
+
+.fairyBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .fairyBgCardGif {
+    visibility: visible;
+}
+
+.fairyTypeImage {
+    background-image: url(../../images/fairy.PNG);
+    background-size: cover;
+}
+
+.fairyImagePokemon {
+    border: .5em solid #e9e;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlWdNnHe62idc0hEXbiJjXzZvSKjyh8Pszi0paVwGZN6ELmSgmrf2BAZdVIdZlf0hOAmY&usqp=CAU);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for fighting type pokemons **/
+/********************************/
+.fightingBgCard {
+    background-color: #b54;
+}
+
+.fightingBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.fightingBgCard::before {
+    background-image: url(https://previews.123rf.com/images/luanateutzi/luanateutzi1510/luanateutzi151000445/46632790-striped-brown-and-beige-textile-pattern-as-a-background-close-up-on-diagonal-stripes-material-textur.jpg);
+    background-size: cover;
+}
+
+.fightingBgCard::after {
+    background-image: linear-gradient(black, rgb(144, 64, 50));
+}
+
+.perspective:hover .fightingBgCard::after {
+    visibility: visible;
+}
+
+.fightingBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .fightingBgCardGif {
+    visibility: visible;
+}
+
+.fightingTypeImage {
+    background-image: url(../../images/fighting.PNG);
+    background-size: cover;
+}
+
+.fightingImagePokemon {
+    border: .5em solid #b54;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3623cfbc-41a8-40f4-bd77-184800f2bd81/dab816e-79f87151-5050-41ee-b51a-dba997b4da34.jpg/v1/fill/w_1023,h_777,q_75,strp/pokemon_go_fighting_type_background_by_thoritegem_dab816e-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03NzciLCJwYXRoIjoiXC9mXC8zNjIzY2ZiYy00MWE4LTQwZjQtYmQ3Ny0xODQ4MDBmMmJkODFcL2RhYjgxNmUtNzlmODcxNTEtNTA1MC00MWVlLWI1MWEtZGJhOTk3YjRkYTM0LmpwZyIsIndpZHRoIjoiPD0xMDIzIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.0Zz_cOVbrSHMVgIAwgW5bmoUX81-A8xJvw9pxp46jKk);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for psychic type pokemons **/
+/********************************/
+.psychicBgCard {
+    background-color: #f59;
+}
+
+.psychicBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.psychicBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/hot-pink-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.psychicBgCard::after {
+    background-image: linear-gradient(black, rgb(192, 68, 118));
+}
+
+.perspective:hover .psychicBgCard::after {
+    visibility: visible;
+}
+
+.psychicBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .psychicBgCardGif {
+    visibility: visible;
+}
+
+.psychicTypeImage {
+    background-image: url(../../images/psychic.png);
+    background-size: cover;
+}
+
+.psychicImagePokemon {
+    border: .5em solid #f59;
+    background-image: url(https://pm1.narvii.com/7243/19a53b46a48f55a346f130092cb2c8d8fcf88af0r1-642-671v2_hq.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for rock type pokemons **/
+/********************************/
+.rockBgCard {
+    background-color: #ba6;
+}
+
+.rockBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.rockBgCard::before {
+    background-image: url(https://img.freepik.com/premium-photo/matte-with-three-dimensional-print-waves-stripes_158469-5910.jpg);
+    background-size: cover;
+}
+
+.rockBgCard::after {
+    background-image: linear-gradient(black, rgb(175, 157, 86));
+}
+
+.perspective:hover .rockBgCard::after {
+    visibility: visible;
+}
+
+.rockBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .rockBgCardGif {
+    visibility: visible;
+}
+
+.rockTypeImage {
+    background-image: url(../../images/rock.png);
+    background-size: cover;
+}
+
+.rockImagePokemon {
+    border: .5em solid #ba6;
+    background-image: url(https://img.game8.co/3626687/b51becd02a41ea4bedc428ce6e8dcd50.png/show);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for ghost type pokemons **/
+/********************************/
+.ghostBgCard {
+    background-color: #66b;
+    color: white;
+}
+
+.ghostBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.ghostBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/purple-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.ghostBgCard::after {
+    background-image: linear-gradient(black, rgb(66, 66, 164));
+}
+
+.perspective:hover .ghostBgCard::after {
+    visibility: visible;
+}
+
+.ghostBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .ghostBgCardGif {
+    visibility: visible;
+}
+
+.ghostTypeImage {
+    background-image: url(../../images/ghost.png);
+    background-size: cover;
+}
+
+.ghostImagePokemon {
+    border: .5em solid #66b;
+    background-image: url(https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Nebulosas.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for ice type pokemons **/
+/********************************/
+.iceBgCard {
+    background-color: #6cf;
+}
+
+.iceBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.iceBgCard::before {
+    background-image: url(https://thumbs.dreamstime.com/b/diagonal-stripes-texture-blue-166470486.jpg);
+    background-size: cover;
+}
+
+.iceBgCard::after {
+    background-image: linear-gradient(black, rgb(41, 147, 201));
+}
+
+.perspective:hover .iceBgCard::after {
+    visibility: visible;
+}
+
+.iceBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .iceBgCardGif {
+    visibility: visible;
+}
+
+.iceTypeImage {
+    background-image: url(../../images/ice.png);
+    background-size: cover;
+}
+
+.iceImagePokemon {
+    border: .5em solid #6cf;
+    background-image: url(https://wallpapercave.com/wp/wp11647432.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for dragon type pokemons **/
+/********************************/
+.dragonBgCard {
+    background-color: #76e;
+}
+
+.dragonBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.dragonBgCard::before {
+    background-image: url(https://t3.ftcdn.net/jpg/03/87/83/72/360_F_387837272_JUpWis5RJfM4v0pzCK7aog3Nj9bMPSuY.jpg);
+    background-size: cover;
+}
+
+.dragonBgCard::after {
+    background-image: linear-gradient(black, rgb(70, 55, 162));
+}
+
+.perspective:hover .dragonBgCard::after {
+    visibility: visible;
+}
+
+.dragonBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .dragonBgCardGif {
+    visibility: visible;
+}
+
+.dragonTypeImage {
+    background-image: url(../../images/dragon.png);
+    background-size: cover;
+}
+
+.dragonImagePokemon {
+    border: .5em solid #76e;
+    background-image: url(https://thumbs.dreamstime.com/b/religion-concept-heavenly-background-dramatic-clouds-divine-shining-heaven-light-sky-beautiful-cloud-sunshine-peaceful-140871056.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for steel type pokemons **/
+/********************************/
+.steelBgCard {
+    background-color: #aab;
+}
+
+.steelBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.steelBgCard::before {
+    background-image: url(https://img.freepik.com/premium-vector/black-white-abstract-lines-seamless-pattern_87543-223.jpg);
+    background-size: cover;
+}
+
+.steelBgCard::after {
+    background-image: linear-gradient(black, rgb(96, 96, 104));
+}
+
+.perspective:hover .steelBgCard::after {
+    visibility: visible;
+}
+
+.steelBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .steelBgCardGif {
+    visibility: visible;
+}
+
+.steelTypeImage {
+    background-image: url(../../images/steel.png);
+    background-size: cover;
+}
+
+.steelImagePokemon {
+    border: .5em solid #aab;
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/402/1008/6/metal-texture-metal-texture-wallpaper-preview.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for flying type pokemons **/
+/********************************/
+.flyingBgCard {
+    background-color: #89f;
+}
+
+.flyingBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.flyingBgCard::before {
+    background-image: url(https://cdn.vectorstock.com/i/preview-1x/09/32/diagonal-blue-motion-lines-background-vector-42050932.jpg);
+    background-size: cover;
+}
+
+.flyingBgCard::after {
+    background-image: linear-gradient(black, rgb(100, 116, 210));
+}
+
+.perspective:hover .flyingBgCard::after {
+    visibility: visible;
+}
+
+.flyingBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .flyingBgCardGif {
+    visibility: visible;
+}
+
+.flyingTypeImage {
+    background-image: url(../../images/flying.PNG);
+    background-size: cover;
+}
+
+.flyingImagePokemon {
+    border: .5em solid #aab;
+    background-image: url(https://images.gamebanana.com/img/ss/mods/61f808313fa1f.jpg);
+    background-size: cover;
+}
+
+/********************************/
+/** CSS for dark type pokemons **/
+/********************************/
+.darkBgCard {
+    background-color: #754;
+    color: white;
+}
+
+.darkBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.darkBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/black-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.darkBgCard::after {
+    background-image: linear-gradient(black, rgb(89, 58, 42));
+}
+
+.perspective:hover .darkBgCard::after {
+    visibility: visible;
+}
+
+.darkBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .darkBgCardGif {
+    visibility: visible;
+}
+
+.darkTypeImage {
+    background-image: url(../../images/dark.png);
+    background-size: cover;
+}
+
+.darkImagePokemon {
+    border: .5em solid #754;
+    background-image: url(https://i.pinimg.com/736x/9f/86/7d/9f867dbeead71e9d7ea096a62c3e1d59--dark-blue-wallpaper-blue-wallpapers.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for unknown type pokemons **/
+/********************************/
+.unknownBgCard {
+    background-color: #707070;
+    color: white;
+}
+
+.unknownBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.unknownBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/black-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.unknownBgCard::after {
+    background-image: linear-gradient(black, #170707);
+}
+
+.perspective:hover .unknownBgCard::after {
+    visibility: visible;
+}
+
+.unknownBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .unknownBgCardGif {
+    visibility: visible;
+}
+
+.unknownTypeImage {
+    background-image: url(../../images/dark.png);
+    background-size: cover;
+}
+
+.unknownImagePokemon {
+    border: .5em solid #707070;
+    background-image: url(https://i.pinimg.com/736x/9f/86/7d/9f867dbeead71e9d7ea096a62c3e1d59--dark-blue-wallpaper-blue-wallpapers.jpg);
+    background-size: cover;
+}
+
+
+/********************************/
+/** CSS for shadow type pokemons **/
+/********************************/
+.shadowBgCard {
+    background-color: #707070;
+    color: white;
+}
+
+.shadowBgCard:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.shadowBgCard::before {
+    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/black-diagonal-striped-plastic-texture.jpg);
+    background-size: cover;
+}
+
+.shadowBgCard::after {
+    background-image: linear-gradient(black, #170707);
+}
+
+.perspective:hover .shadowBgCard::after {
+    visibility: visible;
+}
+
+.shadowBgCardGif {
+    background-image: url(../../images/gbRed.gif);
+    background-size: cover;
+}
+
+.perspective:hover .shadowBgCardGif {
+    visibility: visible;
+}
+
+.shadowypeImage {
+    background-image: url(../../images/dark.png);
+    background-size: cover;
+}
+
+.shadowImagePokemon {
+    border: .5em solid #707070;
+    background-image: url(https://i.pinimg.com/736x/9f/86/7d/9f867dbeead71e9d7ea096a62c3e1d59--dark-blue-wallpaper-blue-wallpapers.jpg);
+    background-size: cover;
+}
+
+
+
+/** CSS for grass type pokemons **/
+.grassTypesPokemon { background-color: #7c5; }
+
+/** CSS for fire type pokemons **/
+.fireTypesPokemon { background-color: #f42; }
+
+/** CSS for water type pokemons **/
+.waterTypesPokemon { background-color: #39f; }
+
+/** CSS for bug type pokemons **/
+.bugTypesPokemon { background-color: #ab2; }
+
+/** CSS for flying type pokemons **/
+.flyingTypesPokemon { background-color: #89f; }
+
+/** CSS for normal type pokemons **/
+.normalTypesPokemon { background-color: #aa9; }
+
+/** CSS for poison type pokemons **/
+.poisonTypesPokemon { background-color: #a59; }
+
+/** CSS for electric type pokemons **/
+.electricTypesPokemon { background-color: #fc3; }
+
+/** CSS for ground type pokemons **/
+.groundTypesPokemon { background-color: #db5; }
+
+/** CSS for fairy type pokemons **/
+.fairyTypesPokemon { background-color: #e9e; }
+
+/** CSS for fighting type pokemons **/
+.fightingTypesPokemon { background-color: #b54; }
+
+/** CSS for psychic type pokemons **/
+.psychicTypesPokemon { background-color: #f59; }
+
+/** CSS for rock type pokemons **/
+.rockTypesPokemon { background-color: #ba6; }
+
+/** CSS for ghost type pokemons **/
+.ghostTypesPokemon { background-color: #66b; }
+
+/** CSS for ice type pokemons **/
+.iceTypesPokemon { background-color: #6cf; }
+
+/** CSS for dragon type pokemons **/
+.dragonTypesPokemon { background-color: #76e; }
+
+/** CSS for dark type pokemons **/
+.darkTypesPokemon { background-color: #754; }
+
+/** CSS for steel type pokemons **/
+.steelTypesPokemon { background-color: #aab; }
+
+/** CSS for unknown type pokemons **/
+.unknownTypesPokemon { background-color: #ab2; }
+
+
+/** CSS for shadow type pokemons **/
+.shadowTypesPokemon { background-color: rgb(27, 25, 25); }

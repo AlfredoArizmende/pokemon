@@ -1,0 +1,251 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 68%;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.infoPokemon {
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .1em;
+}
+
+.infoPokemon h1 {
+    font-size: 4em;
+    margin: 0;
+    font-style: italic;
+}
+
+.infoPokemon h3 {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin: 0;
+}
+
+.imageBoxPokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logoPokemon {
+    width: 140px;
+}
+
+.imagePokemon {
+    width: 512px;
+}
+
+.statsPokemon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    border: 2px solid white;
+    border-radius: .5em;
+    padding: 0.5em;
+    box-shadow: 5px 5px white;
+}
+
+.hpCircleWrap {
+    margin: 1em;
+    width: 120px;
+    height: 120px;
+    background-color: #d9d7da;
+    border-radius: 50%;
+}
+
+.hpCircleWrap .hpCircle .mask,
+.hpCircleWrap .hpCircle .fill1 {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hpCircleWrap .hpCircle .mask {
+    clip: rect(0px, 150px, 150px, 60px);
+}
+
+.mask .fill1 {
+    clip: rect(0px, 60px, 150px, 0px);
+    background-color: #ffcc01;
+}
+
+.mask.full1,
+.hpCircle .fill1 {
+    animation: fill1 ease-in-out 3s;
+    transform: rotate(180deg);
+}
+
+@keyframes fill1 {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(180deg);}
+}
+
+.numCircle {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-color: black;
+    line-height: 40px;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 13px;
+    font-size: 1.2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+}
+
+.typesContainer {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typesPokemon {
+    font-size: 1em;
+    color: white;
+    border-radius: .5em;
+    height: 2em;
+    width: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1em solid rgba(0,0,0,.2);
+    margin: 0 .2em;
+}
+
+
+/********************************/
+/** CSS for grass type pokemons **/
+/********************************/
+.grassTypesPokemon { background-color: #7c5; }
+.grassBox { background: linear-gradient(120deg, #7c5 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for fire type pokemons **/
+/********************************/
+.fireTypesPokemon { background-color: #f42; }
+.fireBox { background: linear-gradient(120deg, #f42 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for water type pokemons **/
+/********************************/
+.waterTypesPokemon { background-color: #39f; }
+.waterBox { background: linear-gradient(120deg, #39f 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for bug type pokemons **/
+/********************************/
+.bugTypesPokemon { background-color: #ab2; }
+.bugBox { background: linear-gradient(120deg, #ab2 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for flying type pokemons **/
+/********************************/
+.flyingTypesPokemon { background-color: #89f; }
+.flyingBox { background: linear-gradient(120deg, #89f 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for normal type pokemons **/
+/********************************/
+.normalTypesPokemon { background-color: #aa9; }
+.normalBox { background: linear-gradient(120deg, #aa9 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for poison type pokemons **/
+/********************************/
+.poisonTypesPokemon { background-color: #a59; }
+.poisonBox { background: linear-gradient(120deg, #a59 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for electric type pokemons **/
+/********************************/
+.electricTypesPokemon { background-color: #fc3; }
+.electricBox { background: linear-gradient(120deg, #fc3 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for ground type pokemons **/
+/********************************/
+.groundTypesPokemon { background-color: #db5; }
+.groundBox { background: linear-gradient(120deg, #db5 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for fairy type pokemons **/
+/********************************/
+.fairyTypesPokemon { background-color: #e9e; }
+.fairyBox { background: linear-gradient(120deg, #e9e 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for fighting type pokemons **/
+/********************************/
+.fightingTypesPokemon { background-color: #b54; }
+.fightingBox { background: linear-gradient(120deg, #b54 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for psychic type pokemons **/
+/********************************/
+.psychicTypesPokemon { background-color: #f59; }
+.psychicBox { background: linear-gradient(120deg, #f59 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for rock type pokemons **/
+/********************************/
+.rockTypesPokemon { background-color: #ba6; }
+.rockBox { background: linear-gradient(120deg, #ba6 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for ghost type pokemons **/
+/********************************/
+.ghostTypesPokemon { background-color: #66b; }
+.ghostBox { background: linear-gradient(120deg, #66b 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for ice type pokemons **/
+/********************************/
+.iceTypesPokemon { background-color: #6cf; }
+.iceBox { background: linear-gradient(120deg, #6cf 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for dragon type pokemons **/
+/********************************/
+.dragonTypesPokemon { background-color: #76e; }
+.dragonBox { background: linear-gradient(120deg, #76e 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for dark type pokemons **/
+/********************************/
+.darkTypesPokemon { background-color: #754; }
+.darkBox { background: linear-gradient(120deg, #754 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for steel type pokemons **/
+/********************************/
+.steelTypesPokemon { background-color: #aab; }
+.steelBox { background: linear-gradient(120deg, #aab 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for unknown type pokemons **/
+/********************************/
+.unknownTypesPokemon { background-color: #ab2; }
+.unknownBox { background: linear-gradient(120deg, #ab2 30%, #00173e 30%); }
+
+/********************************/
+/** CSS for shadow type pokemons **/
+/********************************/
+.shadowTypesPokemon { background-color: rgb(27, 25, 25); }
+.shadowBox { background: linear-gradient(120deg, #aab 30%, #00173e 30%); }
