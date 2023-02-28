@@ -4,7 +4,7 @@ const { Type } = require('../db');
 
 const getAllTypes = async () => {
     const apiTypesRaw = (await axios('https://pokeapi.co/api/v2/type')).data.results;
-     apiTypesRaw.map(async type => {
+    apiTypesRaw.map(async type => {
         await Type.findOrCreate({
             where: { name: type.name}
         })
@@ -14,6 +14,7 @@ const getAllTypes = async () => {
 
     return allTypes;
 }
+
 
 module.exports = {
     getAllTypes

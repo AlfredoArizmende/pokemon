@@ -1,5 +1,6 @@
 const { getAllTypes } = require('../controllers/typesController');
 
+
 const getAllTypesHandler = async (req, res) => {
     try {
         const results = await getAllTypes();
@@ -8,6 +9,7 @@ const getAllTypesHandler = async (req, res) => {
         return res.status(400).json({ error: error.message });
     }
 }
+
 
 module.exports = {
     getAllTypesHandler

@@ -2,6 +2,27 @@ const axios = require('axios');
 const { Pokemon, Type } = require('../db');
 
 
+const cleanArrayDb = (array) => {
+    const cleanDb = array.map(element => {
+        return {
+            id: element.id,
+            name: element.name,
+            hp: element.hp,
+            attack: element.attack,
+            defense: element.defense,
+            speed: element.speed,
+            height: element.height,
+            weight: element.weight,
+            image: element.image,
+            types: element.Types.map(type => type.name),
+            created: element.created
+        }
+    });
+
+    return cleanDb;
+}
+
+
 const cleanArray = (array) => {
     const clean = array.map(element => {
         return {
@@ -14,7 +35,7 @@ const cleanArray = (array) => {
             height: element.height,
             weight: element.weight,
             image: element.sprites.other.home.front_default,
-            Types: element.types.map(type => ({name: type.type.name})),
+            types: element.types.map(type => type.type.name),
             created: false
         }
     });
@@ -24,7 +45,7 @@ const cleanArray = (array) => {
 
 
 const getAllPokemons = async () => {
-    const dataBasePokemon = await Pokemon.findAll({
+    const dbPokemonRaw = await Pokemon.findAll({
         include: {
             model: Type,
             attributes: ['name'],
@@ -33,13 +54,14 @@ const getAllPokemons = async () => {
     });
     const apiPokemonRaw = [];
 
-    for (let i = 1; i < 11; i++){
+    for (let i = 1; i < 2; i++){
         apiPokemonRaw.push((await axios(`https://pokeapi.co/api/v2/pokemon/${i}`)).data);
     }
 
+    const dbPokemon = cleanArrayDb(dbPokemonRaw);
     const apiPokemon = cleanArray(apiPokemonRaw);
 
-    const results = [...dataBasePokemon, ...apiPokemon];
+    const results = [...dbPokemon, ...apiPokemon];
 
     return results;
 }
@@ -86,7 +108,19 @@ const getPokemonById = async (idPokemon, source) => {
 
     if (pokemonRaw === null) throw new Error(`The Pokemon with id ${idPokemon} does not exist in the database`);
 
-    return pokemonRaw;
+    return {
+        id: pokemonRaw.id,
+        name: pokemonRaw.name,
+        hp: pokemonRaw.hp,
+        attack: pokemonRaw.attack,
+        defense: pokemonRaw.defense,
+        speed: pokemonRaw.speed,
+        height: pokemonRaw.height,
+        weight: pokemonRaw.weight,
+        image: pokemonRaw.image,
+        types: pokemonRaw.Types.map(type => type.name),
+        created: pokemonRaw.created
+    }
 }
 
 
@@ -104,7 +138,7 @@ const apiSearchByName = async (name) => {
 
 const getPokemonByName = async (name) => {
     const cleanName = name.trim().toLowerCase();
-    const dataBasePokemon = await Pokemon.findAll({ 
+    const dbPokemonRaw = await Pokemon.findAll({ 
         where: { name: cleanName },
         include: {
             model: Type,
@@ -112,9 +146,10 @@ const getPokemonByName = async (name) => {
             through: { attributes: [] }
         }
     });
+    const dbPokemon = cleanArrayDb(dbPokemonRaw);
     const apiPokemon = await apiSearchByName(cleanName);
 
-    const results = [...dataBasePokemon, ...apiPokemon]
+    const results = [...dbPokemon, ...apiPokemon]
 
     if (!results.length) throw new Error(`The Pokemon with the name ${name} does not exist`);
 
@@ -123,6 +158,12 @@ const getPokemonByName = async (name) => {
 
 
 const createPokemon = async (name, image, hp, attack, defense, speed, height, weight, types) => {
+    const verifyPokemon = await Pokemon.findAll({ 
+        where: { name: name }
+    });
+
+    if (verifyPokemon.length > 0) throw new Error(`The Pokemon with the name ${name} already exists`);
+
     const newPokemon = await Pokemon.create({ name, image, hp, attack, defense, speed, height, weight });
 
     const pokemonType = await Type.findAll({
