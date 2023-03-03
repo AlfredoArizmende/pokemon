@@ -54,7 +54,7 @@ const getAllPokemons = async () => {
     });
     const apiPokemonRaw = [];
 
-    for (let i = 1; i < 2; i++){
+    for (let i = 1; i < 41; i++){
         apiPokemonRaw.push((await axios(`https://pokeapi.co/api/v2/pokemon/${i}`)).data);
     }
 
