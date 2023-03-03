@@ -1,10 +1,10 @@
-import { GET_ALL_POKEMONS, GET_DETAIL_POKEMON, FILTER_POKEMONS_BY_SOURCE, ORDER_POKEMONS, GET_NAME_POKEMON, GET_ALL_TYPES, FILTER_POKEMONS_BY_TYPES } from './action-types';
+import { GET_ALL_POKEMONS, GET_DETAIL_POKEMON, FILTER_POKEMONS_BY_SOURCE, ORDER_POKEMONS, GET_NAME_POKEMON, GET_ALL_TYPES, FILTER_POKEMONS_BY_TYPES, RESET_SEARCH, CLEAN_DETAIL, CLEAN_POKEMONS } from './action-types';
 
 
 const initialState = {
     pokemons: [],
     allPokemons: [],
-    detailPokemon: [],
+    detailPokemon: {},
     types: []
  };
 
@@ -36,15 +36,32 @@ const initialState = {
           types: action.payload
         }
 
-      case FILTER_POKEMONS_BY_TYPES:
-        let typesFiltered;
-
-        if (action.payload === 'all') {
-          typesFiltered = state.allPokemons;
-        } else {
-          typesFiltered = state.allPokemons.filter(pokemon => pokemon.types.includes(action.payload));
+      case RESET_SEARCH:
+        return {
+          ...state,
+          pokemons: state.allPokemons,
+          filterTypes: [],
+          filterSource: []
         }
-        
+
+      case CLEAN_POKEMONS:
+        return {
+          ...state,
+          pokemons: []
+        }
+
+      case CLEAN_DETAIL:
+        return {
+          ...state,
+          detailPokemon: {}
+        }
+
+      case FILTER_POKEMONS_BY_TYPES:
+        let typesFiltered = action.payload === 'all'
+                            ? state.allPokemons
+                            : state.allPokemons.filter(pokemon => pokemon.types.includes(action.payload));
+
+
         return {
           ...state,
           pokemons: typesFiltered
@@ -62,7 +79,7 @@ const initialState = {
         }
 
         if (action.payload === 'api') {
-            sourceFiltered = state.allPokemons.filter(pokemon => pokemon.created === false); 
+            sourceFiltered = state.allPokemons.filter(pokemon => pokemon.created === false);
         }
 
         return {

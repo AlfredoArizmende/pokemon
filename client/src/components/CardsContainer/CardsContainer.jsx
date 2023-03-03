@@ -1,43 +1,34 @@
 import React from 'react';
-import { useEffect, useState } from "react";
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllPokemons, filterPokemonsBySource, orderPokemons, getAllTypes, filterPokemonsByTypes } from "../../redux/actions";
+import { getAllPokemons, filterPokemonsBySource, orderPokemons, filterPokemonsByTypes, resetSearch } from "../../redux/actions";
 import style from './CardsContainer.module.css';
 import Card from "../Card/Card";
 import Loading from '../Loading/Loading';
 import Pagination from "../../components/Pagination/Pagination";
 
 
-const CardsContainer = () => {
+const CardsContainer = ({ loading, setLoading, pokemonsPerPage, pokemons, setCurrentPage, currentPage, currentPokemons, minPageNumberLimit, maxPageNumberLimit, setMinPageNumberLimit, setMaxPageNumberLimit, pageNumberLimit }) => {
     const dispatch = useDispatch();
+    const { types } = useSelector(state => state);
+    const [selectTypes, setSelectTypes] = useState('');
+    const [selectSource, setSelectSource] = useState('');
+    const [selectOrder, setSelectOrder] = useState('');
 
-    const { pokemons, types } = useSelector(state => state);
-    const [loading, setLoading] = useState(false);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage] = useState(12);
-    const lastPokemonIndex = currentPage * pokemonsPerPage;
-    const firstPokemonIndex = lastPokemonIndex - pokemonsPerPage;
-    const currentPokemons = pokemons.slice(firstPokemonIndex, lastPokemonIndex);
-
-    useEffect(() => {
-        dispatch(getAllPokemons())
-            .then(res => setLoading(true))
-            .catch(error => error);
-
-        dispatch(getAllTypes());
-    }, [dispatch]);
-    
     const filterPokemonsByTypesHandler = (event) => {
+        setSelectTypes(event.target.value);
         dispatch(filterPokemonsByTypes(event.target.value));
         setCurrentPage(1);
     }
 
     const filterPokemonsBySourceHandler = (event) => {
+        setSelectSource(event.target.value);
         dispatch(filterPokemonsBySource(event.target.value));
         setCurrentPage(1);
     }
 
     const orderPokemonsHandler = (event) => {
+        setSelectOrder(event.target.value);
         dispatch(orderPokemons(event.target.value));
         setCurrentPage(1);
     }
@@ -48,12 +39,19 @@ const CardsContainer = () => {
             .then(res => setLoading(true))
             .catch(error => error);
     }
+
+    const resetSearchHandler = () => {
+        setSelectTypes('');
+        setSelectSource('');
+        setSelectOrder('');
+        dispatch(resetSearch());
+    }
     
     return (
         <div>
             <div className={style.containerFilters}>
-                <select className={style.selectBox} onChange={filterPokemonsByTypesHandler}>
-                    <option value="all">All types</option>
+                <select className={style.selectBox} onChange={filterPokemonsByTypesHandler} value={selectTypes}>
+                    <option value="all">All Types</option>
                     {
                         types.map(type => {
                             return (
@@ -63,27 +61,34 @@ const CardsContainer = () => {
                     }
                 </select>
 
-                <select className={style.selectBox} onChange={filterPokemonsBySourceHandler}>
+                <select className={style.selectBox} onChange={filterPokemonsBySourceHandler} value={selectSource}>
                     <option value="all">All Pokemos</option>
                     <option value="db">Created</option>
                     <option value="api">API</option>
                 </select>
 
-                <select className={style.selectBox} onChange={orderPokemonsHandler}>
-                    <option value="asc">Ascending</option>
-                    <option value="desc">Descending</option>
+                <select className={style.selectBox} onChange={orderPokemonsHandler} value={selectOrder}>
+                    <option value="asc">ID Ascending</option>
+                    <option value="desc">ID Descending</option>
                     <option value="name">By Name</option>
                     <option value="attack">By Attack</option>
                 </select>
 
                 <button className={style.btnAllPokemon} onClick={loadAllPokemonsHandler}>Load All Pokemons</button>
+
+                <button className={style.btnAllPokemon} onClick={resetSearchHandler}>Reset Search</button>
             </div>
             <div>
                 <Pagination
                     pokemonsPerPage={pokemonsPerPage}
-                    pokemons={pokemons.length}
+                    pokemonsLength={pokemons.length}
                     setCurrentPage={setCurrentPage}
                     currentPage={currentPage}
+                    minPageNumberLimit={minPageNumberLimit}
+                    maxPageNumberLimit={maxPageNumberLimit}
+                    setMinPageNumberLimit={setMinPageNumberLimit}
+                    setMaxPageNumberLimit={setMaxPageNumberLimit}
+                    pageNumberLimit={pageNumberLimit}
                 />
             </div>
             {

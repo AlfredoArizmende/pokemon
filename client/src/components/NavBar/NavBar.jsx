@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import style from './NavBar.module.css';
 import SearchBar from "../SearchBar/SearchBar";
 
 
-const NavBar = () => {
+const NavBar = ({ setCurrentPage, setLoading }) => {
+    const location = useLocation().pathname;
+    console.log(location);
     return (
         <div className={style.container}>
             <Link to='/'>
@@ -11,7 +13,7 @@ const NavBar = () => {
             </Link>
             <Link className={style.menu} to='/home'>Home</Link>
             <Link className={style.menu} to='/create'>Create a pokemon</Link>
-            <SearchBar />
+            { location === '/home' && <SearchBar setCurrentPage={setCurrentPage} setLoading={setLoading} /> }
         </div>
     );
 }

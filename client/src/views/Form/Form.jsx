@@ -3,12 +3,12 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { validate } from './validation';
-import { getAllTypes } from '../../redux/actions';
+import { getAllTypes, getAllPokemons } from '../../redux/actions';
 import Modal from '../../components/Modal/Modal';
 import style from './Form.module.css';
 
 
-const Form = () => {
+const Form = ({ setLoading }) => {
     const dispatch = useDispatch();
     const { types } = useSelector(state => state);
 
@@ -36,9 +36,9 @@ const Form = () => {
         hp: '', 
         attack: '', 
         defense: '', 
-        speed: '0', 
-        height: '0', 
-        weight: '0',
+        speed: '', 
+        height: '', 
+        weight: '',
         types: ''
     });
 
@@ -77,34 +77,39 @@ const Form = () => {
     const submitHandler = (event) => {
         event.preventDefault();
         axios.post('http://localhost:3001/pokemons', pokemonData)
-            .then(res => {
-                setMessage({
-                    title: 'Pokemon created',
-                    message: res.data
-                });
+        .then(res => {
+            setLoading(false);
+            dispatch(getAllPokemons())
+                .then(res => setLoading(true))
+                .catch(error => error);
 
-                setModal(true);
-            })
-            .catch(err => {
-                setMessage({
-                    title: 'Failed to create',
-                    message: err.response.data.error
-                });
-
-                setModal(true);
+            setMessage({
+                title: 'Pokemon created',
+                message: res.data
             });
 
-            setPokemonData({
-                name: '', 
-                image: '',
-                hp: '0', 
-                attack: '0', 
-                defense: '0', 
-                speed: '0', 
-                height: '0', 
-                weight: '0',
-                types: []
+            setModal(true);
+        })
+        .catch(err => {
+            setMessage({
+                title: 'Failed to create',
+                message: err.response.data.error
             });
+
+            setModal(true);
+        });
+
+        setPokemonData({
+            name: '', 
+            image: '',
+            hp: '0', 
+            attack: '0', 
+            defense: '0', 
+            speed: '0', 
+            height: '0', 
+            weight: '0',
+            types: []
+        });
     }
 
     return (
@@ -162,6 +167,7 @@ const Form = () => {
                                     <input type="range" name="speed" min='0' max='200' step="1" value={pokemonData.speed} onChange={changeInputsHandler} />
                                     <span>{pokemonData.speed}</span>
                                 </div>
+                                { errors.speed && <p className={style.errorMessage}>{errors.speed}</p> }
                             </div>
 
                             <div className={style.inputBoxRange}>
@@ -170,6 +176,7 @@ const Form = () => {
                                     <input type="range" name="height" min='0' max='200' step="1" value={pokemonData.height} onChange={changeInputsHandler} />
                                     <span>{pokemonData.height}</span>
                                 </div>
+                                { errors.height && <p className={style.errorMessage}>{errors.height}</p> }
                             </div>
 
                             <div className={style.inputBoxRange}>
@@ -178,6 +185,7 @@ const Form = () => {
                                     <input type="range" name="weight" min='0' max='200' step="1" value={pokemonData.weight} onChange={changeInputsHandler} />
                                     <span>{pokemonData.weight}</span>
                                 </div>
+                                { errors.weight && <p className={style.errorMessage}>{errors.weight}</p> }
                             </div>
                         </div>
 
@@ -198,7 +206,7 @@ const Form = () => {
                         </div>
 
                         {
-                            errors.name || errors.image || errors.hp || errors.attack || errors.defense || !pokemonData.name || !pokemonData.image || pokemonData.hp === '0' || pokemonData.types.length < 1
+                            errors.name || errors.image || errors.hp || errors.attack || errors.defense || errors.speed || errors.height || errors.weight || errors.types || !pokemonData.name || !pokemonData.image 
                             ? <button className={style.btnCreateDis} type="submit" disabled>Create Pokemon</button>
                             : <button className={style.btnCreate} type="submit">Create Pokemon</button>
                         }

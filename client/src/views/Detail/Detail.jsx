@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from "react-router-dom";
-import { getDetailPokemon } from '../../redux/actions';
+import { getDetailPokemon, cleanDetail } from '../../redux/actions';
 import style from './Detail.module.css';
 
 
@@ -13,6 +13,7 @@ const Detail = () => {
     
     useEffect(() => {
         dispatch(getDetailPokemon(idPokemon));
+        return () => dispatch(cleanDetail());
     }, [dispatch, idPokemon]);
 
     return (

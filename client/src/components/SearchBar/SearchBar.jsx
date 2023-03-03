@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import {useDispatch} from 'react-redux';
-import { getNamePokemon } from "../../redux/actions";
+import { useDispatch } from 'react-redux';
+import { getNamePokemon, cleanPokemons, resetSearch } from "../../redux/actions";
 import Modal from '../../components/Modal/Modal';
 import style from './SearchBar.module.css'
 
 
-const SearchBar = () => {
+const SearchBar = ({ setCurrentPage, setLoading }) => {
     const dispatch = useDispatch();
     const [name, setName] = useState('');
     const [modal, setModal] = useState(false);
@@ -20,17 +20,25 @@ const SearchBar = () => {
     }
 
     const buttonHandler = () => {
+        setLoading(false);
+        dispatch(cleanPokemons());
+
         (dispatch(getNamePokemon(name)))
-        .then(res => res)
+        .then(res => setLoading(true))
         .catch(err => {
+            setLoading(true);
+            dispatch(resetSearch());
+            
             setMessegeError({
                 title: 'Pokemon not found',
                 message: err.response.data.error
             });
+
             setModal(true);
         });
 
         setName('');
+        setCurrentPage(1);
     }
 
     return (

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_ALL_POKEMONS, GET_DETAIL_POKEMON, FILTER_POKEMONS_BY_SOURCE, ORDER_POKEMONS, GET_NAME_POKEMON, GET_ALL_TYPES, FILTER_POKEMONS_BY_TYPES } from './action-types';
+import { GET_ALL_POKEMONS, GET_DETAIL_POKEMON, FILTER_POKEMONS_BY_SOURCE, ORDER_POKEMONS, GET_NAME_POKEMON, GET_ALL_TYPES, FILTER_POKEMONS_BY_TYPES, RESET_SEARCH, CLEAN_DETAIL, CLEAN_POKEMONS } from './action-types';
 
 
 export const getAllPokemons = () => {
@@ -74,5 +74,26 @@ export const getAllTypes = () => {
             type: GET_ALL_TYPES,
             payload: types
         });
+    }
+}
+
+
+export const resetSearch = () => {
+    return { 
+        type: RESET_SEARCH
+    }
+}
+
+
+export const cleanDetail = () => {
+    return { 
+        type: CLEAN_DETAIL
+    }
+}
+
+
+export const cleanPokemons = () => {
+    return { 
+        type: CLEAN_POKEMONS
     }
 }
