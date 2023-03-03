@@ -17,7 +17,7 @@ const App = () => {
   const { pokemons } = useSelector(state => state);
   const [currentPage, setCurrentPage] = useState(1);
   const [pokemonsPerPage] = useState(12);
-  const [pageNumberLimit] = useState(1);
+  const [pageNumberLimit] = useState(10);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(10);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
   const lastPokemonIndex = currentPage * pokemonsPerPage;
