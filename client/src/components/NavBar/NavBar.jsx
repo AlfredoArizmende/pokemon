@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const NavBar = ({ setCurrentPage, setLoading }) => {
     const location = useLocation().pathname;
-    console.log(location);
+
     return (
         <div className={style.container}>
             <Link to='/'>

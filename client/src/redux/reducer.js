@@ -39,9 +39,7 @@ const initialState = {
       case RESET_SEARCH:
         return {
           ...state,
-          pokemons: state.allPokemons,
-          filterTypes: [],
-          filterSource: []
+          pokemons: state.allPokemons
         }
 
       case CLEAN_POKEMONS:
