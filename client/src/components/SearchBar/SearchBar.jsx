@@ -24,7 +24,7 @@ const SearchBar = ({ setCurrentPage, setLoading }) => {
         dispatch(cleanPokemons());
 
         (dispatch(getNamePokemon(name)))
-        .then(res => setLoading(true))
+        .then(() => setLoading(true))
         .catch(err => {
             setLoading(true);
             dispatch(resetSearch());

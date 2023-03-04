@@ -26,7 +26,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getAllPokemons())
-    .then(res => setLoading(true))
+    .then(() => setLoading(true))
     .catch(error => error);
 
     dispatch(getAllTypes());
@@ -39,7 +39,7 @@ const App = () => {
       <Routes>
         <Route path='' element={ <Landing /> } />
         <Route path='home' element={ <Home loading={loading} setLoading={setLoading} pokemonsPerPage={pokemonsPerPage} pokemons={pokemons} setCurrentPage={setCurrentPage} currentPage={currentPage} currentPokemons={currentPokemons} minPageNumberLimit={minPageNumberLimit} maxPageNumberLimit={maxPageNumberLimit} setMinPageNumberLimit={setMinPageNumberLimit} setMaxPageNumberLimit={setMaxPageNumberLimit} pageNumberLimit={pageNumberLimit} /> } />
-        <Route path='detail/:idPokemon' element={ <Detail /> } />
+        <Route path='detail/:idPokemon' element={ <Detail loading={loading} setLoading={setLoading} /> } />
         <Route path='create' element={ <Form setLoading={setLoading} /> } />
       </Routes>
     </div>

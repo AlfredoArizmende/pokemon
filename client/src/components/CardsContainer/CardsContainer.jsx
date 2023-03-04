@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllPokemons, filterPokemonsBySource, orderPokemons, filterPokemonsByTypes, resetSearch } from "../../redux/actions";
+import { getAllPokemons, filterPokemonsBySource, orderPokemons, filterPokemonsByTypes, resetSearch, filterPokemonsByAttack } from "../../redux/actions";
 import style from './CardsContainer.module.css';
 import Card from "../Card/Card";
 import Loading from '../Loading/Loading';
@@ -33,11 +33,18 @@ const CardsContainer = ({ loading, setLoading, pokemonsPerPage, pokemons, setCur
         setCurrentPage(1);
     }
 
+    const filterPokemonsByAttackHandler = () => {
+        dispatch(filterPokemonsByAttack());
+        setCurrentPage(1);
+    }
+
     const loadAllPokemonsHandler = () => {
         setLoading(false);
         dispatch(getAllPokemons())
-            .then(res => setLoading(true))
+            .then(() => setLoading(true))
             .catch(error => error);
+        
+        setCurrentPage(1);
     }
 
     const resetSearchHandler = () => {
@@ -50,6 +57,8 @@ const CardsContainer = ({ loading, setLoading, pokemonsPerPage, pokemons, setCur
     return (
         <div>
             <div className={style.containerFilters}>
+                <button className={style.btnAllPokemon} onClick={filterPokemonsByAttackHandler}>Filter by attack less than 70</button>
+
                 <select className={style.selectBox} onChange={filterPokemonsByTypesHandler} value={selectTypes}>
                     <option value="all">All Types</option>
                     {

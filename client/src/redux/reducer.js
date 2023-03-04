@@ -1,4 +1,4 @@
-import { GET_ALL_POKEMONS, GET_DETAIL_POKEMON, FILTER_POKEMONS_BY_SOURCE, ORDER_POKEMONS, GET_NAME_POKEMON, GET_ALL_TYPES, FILTER_POKEMONS_BY_TYPES, RESET_SEARCH, CLEAN_DETAIL, CLEAN_POKEMONS } from './action-types';
+import { GET_ALL_POKEMONS, GET_DETAIL_POKEMON, FILTER_POKEMONS_BY_SOURCE, ORDER_POKEMONS, GET_NAME_POKEMON, GET_ALL_TYPES, FILTER_POKEMONS_BY_TYPES, RESET_SEARCH, CLEAN_DETAIL, CLEAN_POKEMONS, FILTER_POKEMONS_BY_ATTACK } from './action-types';
 
 
 const initialState = {
@@ -54,6 +54,14 @@ const initialState = {
           detailPokemon: {}
         }
 
+      case FILTER_POKEMONS_BY_ATTACK:
+        let attackFiltered = state.allPokemons.filter(pokemon => pokemon.attack < 70);
+
+        return {
+          ...state,
+          pokemons: attackFiltered
+        }
+
       case FILTER_POKEMONS_BY_TYPES:
         let typesFiltered = action.payload === 'all'
                             ? state.allPokemons
@@ -63,7 +71,7 @@ const initialState = {
         return {
           ...state,
           pokemons: typesFiltered
-        }
+        }      
 
       case FILTER_POKEMONS_BY_SOURCE:
         let sourceFiltered;
