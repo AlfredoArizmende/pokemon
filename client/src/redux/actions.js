@@ -4,8 +4,8 @@ import { GET_ALL_POKEMONS, GET_DETAIL_POKEMON, FILTER_POKEMONS_BY_SOURCE, ORDER_
 
 export const getAllPokemons = () => {
     return async (dispatch) => {
-        const response = await axios.get('http://localhost:3001/pokemons'); // to work in localhost
-        // const response = await axios.get('https://pokemon-production-e995.up.railway.app/pokemons'); // to work in deploy
+        // const response = await axios.get('http://localhost:3001/pokemons'); // to work in localhost
+        const response = await axios.get('https://pokemon-production-e15a.up.railway.app/pokemons'); // to work in deploy
         const pokemons = response.data;
 
         return dispatch({
@@ -18,8 +18,8 @@ export const getAllPokemons = () => {
 
 export const getNamePokemon = (name) => {
     return async (dispatch) => {
-        const response = await axios.get(`http://localhost:3001/pokemons?name=${name}`); // to work in localhost
-        // const response = await axios.get(`https://pokemon-production-e995.up.railway.app/pokemons?name=${name}`); // to work in deploy
+        // const response = await axios.get(`http://localhost:3001/pokemons?name=${name}`); // to work in localhost
+        const response = await axios.get(`https://pokemon-production-e15a.up.railway.app/pokemons?name=${name}`); // to work in deploy
         const pokemon = response.data;
 
         return dispatch({
@@ -32,8 +32,8 @@ export const getNamePokemon = (name) => {
 
 export const getDetailPokemon = (idPokemon) => {
     return async (dispatch) => {
-        const response = await axios.get(`http://localhost:3001/pokemons/${idPokemon}`); // to work in localhost
-        // const response = await axios.get(`https://pokemon-production-e995.up.railway.app/pokemons/${idPokemon}`); // to work in deploy
+        // const response = await axios.get(`http://localhost:3001/pokemons/${idPokemon}`); // to work in localhost
+        const response = await axios.get(`https://pokemon-production-e15a.up.railway.app/pokemons/${idPokemon}`); // to work in deploy
         const pokemon = response.data;
 
         return dispatch({
@@ -76,8 +76,8 @@ export const orderPokemons = (typeOrder) => {
 
 export const getAllTypes = () => {
     return async (dispatch) => {
-        const response = await axios.get('http://localhost:3001/types'); // to work in localhost
-        // const response = await axios.get('https://pokemon-production-e995.up.railway.app/types'); // to work in deploy
+        // const response = await axios.get('http://localhost:3001/types'); // to work in localhost
+        const response = await axios.get('https://pokemon-production-e15a.up.railway.app/types'); // to work in deploy
         const types = response.data;
 
         return dispatch({

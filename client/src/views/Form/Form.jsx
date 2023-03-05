@@ -76,8 +76,8 @@ const Form = ({ setLoading }) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3001/pokemons', pokemonData) // to work in localhost
-        // axios.post('https://pokemon-production-e995.up.railway.app/pokemons', pokemonData) // to work in deploy
+        // axios.post('http://localhost:3001/pokemons', pokemonData) // to work in localhost
+        axios.post('https://pokemon-production-e15a.up.railway.app/pokemons', pokemonData) // to work in deploy
         .then(res => {
             setLoading(false);
             dispatch(getAllPokemons())
