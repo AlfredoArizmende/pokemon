@@ -28,7 +28,7 @@ const Detail = ({loading, setLoading}) => {
                 <div className={style.container}>
                     <div className={`${style.box} ${style[`${detailPokemon.types?.[0]}Box`]}`}>
                         <div className={style.imageBoxPokemon}>
-                            <img className={style.logoPokemon} src="../../images/PokemonLogo.png" alt="Logo Pokemon" />
+                            <img className={style.logoPokemon} src={"../../images/PokemonLogo.png"} alt="Logo Pokemon" />
                             <img className={style.imagePokemon} src={detailPokemon?.image} alt={detailPokemon?.name} />
                         </div>
                         <div className={style.infoPokemon}>
