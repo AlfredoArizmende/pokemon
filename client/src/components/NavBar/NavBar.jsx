@@ -9,7 +9,7 @@ const NavBar = ({ setCurrentPage, setLoading }) => {
     return (
         <div className={style.container}>
             <Link to='/'>
-                <img className={style.logoPokemon} src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/800px-International_Pok%C3%A9mon_logo.svg.png" alt="Logo Pokemon" />
+                <img className={style.logoPokemon} src="../../images/PokemonLogo.png" alt="Logo Pokemon" />
             </Link>
             <Link className={style.menu} to='/home'>Home</Link>
             <Link className={style.menu} to='/create'>Create a pokemon</Link>

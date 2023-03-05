@@ -162,7 +162,7 @@ a {
 }
 
 .fireBgCard::before {
-    background-image: url(https://img.freepik.com/free-vector/grunge-diagonal-stripe-background_1409-1366.jpg);
+    background-image: url(../../images/fireBgCard.png);
     background-size: cover;
 }
 
@@ -190,7 +190,7 @@ a {
 
 .fireImagePokemon {
     border: .5em solid #ffe659;
-    background-image: url(https://blackrobe.github.io/BFStoryArchive/BFStoryArchive/dungeon_battle_collection/dungeon_battle_10200.jpg);
+    background-image: url(../../images/fireBgArea.jpg);
     background-size: cover;
 }
 
@@ -208,7 +208,7 @@ a {
 }
 
 .grassBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/sage-green-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/grassBgCard.jpg);
     background-size: cover;
 }
 
@@ -236,7 +236,7 @@ a {
 
 .grassImagePokemon {
     border: .5em solid #5db639;
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/df0dwcb-c264fc01-23cf-43e7-b42b-2d3a6a6d565c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGYwZHdjYi1jMjY0ZmMwMS0yM2NmLTQzZTctYjQyYi0yZDNhNmE2ZDU2NWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.fSXghpSjeaR409VsfrJnq_dl_imCixcDB_0lmEshSis);
+    background-image: url(../../images/grassBgArea.png);
     background-size: cover;
 }
 
@@ -254,7 +254,7 @@ a {
 }
 
 .waterBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/sky-blue-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/waterBgCard.jpg);
     background-size: cover;
 }
 
@@ -282,7 +282,7 @@ a {
 
 .waterImagePokemon {
     border: .5em solid #4a9ff5;
-    background-image: url(https://e0.pxfuel.com/wallpapers/701/64/desktop-wallpaper-anime-ocean-background-pokemon-underwater.jpg);
+    background-image: url(../../images/waterBgArea.jpg);
     background-size: cover;
 }
 
@@ -300,7 +300,7 @@ a {
 }
 
 .bugBgCard::before {
-    background-image: url(https://thumbs.dreamstime.com/b/bright-green-texture-background-vector-design-44898823.jpg);
+    background-image: url(../../images/bugBgCard.jpg);
     background-size: cover;
 }
 
@@ -328,7 +328,7 @@ a {
 
 .bugImagePokemon {
     border: .5em solid #ab2;
-    background-image: url(https://www.bhmpics.com/downloads/pokemon-forest-background/7.1475361156.blazingifrit_zoruaeevee_background.jpg);
+    background-image: url(../../images/bugBgArea.webp);
     background-size: cover;
 }
 
@@ -346,7 +346,7 @@ a {
 }
 
 .normalBgCard::before {
-    background-image: url(https://img.freepik.com/free-vector/clean-minimal-white-stripes-vector-pattern-background_1017-13994.jpg);
+    background-image: url(../../images/normalBgCard.png);
     background-size: cover;
 }
 
@@ -374,7 +374,7 @@ a {
 
 .normalImagePokemon {
     border: .5em solid #aa9;
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aa15ff7d-d333-4bf9-b115-95e18f63fe91/d8fbmbq-69a1f210-aa05-4a78-8425-4b6b84b9a335.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FhMTVmZjdkLWQzMzMtNGJmOS1iMTE1LTk1ZTE4ZjYzZmU5MVwvZDhmYm1icS02OWExZjIxMC1hYTA1LTRhNzgtODQyNS00YjZiODRiOWEzMzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UwbEhZVcsWv7NAON1L5LhP22kuGx_8G2uqM0oeBNCv4);
+    background-image: url(../../images/normalBgArea.png);
     background-size: cover;
 }
 
@@ -392,7 +392,7 @@ a {
 }
 
 .poisonBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/purple-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/poisonBgCard.jpg);
     background-size: cover;
 }
 
@@ -420,7 +420,7 @@ a {
 
 .poisonImagePokemon {
     border: .5em solid #a59;
-    background-image: url(https://i.pinimg.com/474x/ac/72/16/ac72169c6b47da2d3cb49420875293ab.jpg);
+    background-image: url(../../images/poisonBgArea.jpg);
     background-size: cover;
 }
 
@@ -438,7 +438,7 @@ a {
 }
 
 .electricBgCard::before {
-    background-image: url(https://previews.123rf.com/images/tashechka/tashechka1608/tashechka160800161/61218174-diagonal-stripes-pattern-seamless-texture-background-ideal-for-printing-onto-fabric-and-paper-or-dec.jpg);
+    background-image: url(../../images/electricBgCard.webp);
     background-size: cover;
 }
 
@@ -466,7 +466,7 @@ a {
 
 .electricImagePokemon {
     border: .5em solid #fc3;
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30751457-a50b-4f4c-a9f2-5a8ee5504f89/d6awe5m-d41ba327-6970-4ab7-8353-6f236d203006.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNzUxNDU3LWE1MGItNGY0Yy1hOWYyLTVhOGVlNTUwNGY4OVwvZDZhd2U1bS1kNDFiYTMyNy02OTcwLTRhYjctODM1My02ZjIzNmQyMDMwMDYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.AUmy6I5dg6CxX8xfTeDtVElZ_nv9mn5hbsOsGjl1cUw);
+    background-image: url(../../images/electricBgArea.png);
     background-size: cover;
 }
 
@@ -484,7 +484,7 @@ a {
 }
 
 .groundBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/brown-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/groundBgCard.jpg);
     background-size: cover;
 }
 
@@ -512,7 +512,7 @@ a {
 
 .groundImagePokemon {
     border: .5em solid #db5;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHXqtOXIRcEUqMPc7vajCygraZwm1DgbjOFcMc_fQ-gusqAC-xaam9gUgu2prPkPPEBWo&usqp=CAU);
+    background-image: url(../../images/groundBgArea.png);
     background-size: cover;
 }
 
@@ -530,7 +530,7 @@ a {
 }
 
 .fairyBgCard::before {
-    background-image: url(https://previews.123rf.com/images/alena0509/alena05091506/alena0509150600102/41072610-pastel-patr%C3%B3n-rayas-diagonales-en-el-tono-de-color-rosa.jpg);
+    background-image: url(../../images/fairyBgCard.webp);
     background-size: cover;
 }
 
@@ -558,7 +558,7 @@ a {
 
 .fairyImagePokemon {
     border: .5em solid #e9e;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlWdNnHe62idc0hEXbiJjXzZvSKjyh8Pszi0paVwGZN6ELmSgmrf2BAZdVIdZlf0hOAmY&usqp=CAU);
+    background-image: url(../../images/fairyBgArea.png);
     background-size: cover;
 }
 
@@ -576,7 +576,7 @@ a {
 }
 
 .fightingBgCard::before {
-    background-image: url(https://previews.123rf.com/images/luanateutzi/luanateutzi1510/luanateutzi151000445/46632790-striped-brown-and-beige-textile-pattern-as-a-background-close-up-on-diagonal-stripes-material-textur.jpg);
+    background-image: url(../../images/fightingBgCard.webp);
     background-size: cover;
 }
 
@@ -604,7 +604,7 @@ a {
 
 .fightingImagePokemon {
     border: .5em solid #b54;
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3623cfbc-41a8-40f4-bd77-184800f2bd81/dab816e-79f87151-5050-41ee-b51a-dba997b4da34.jpg/v1/fill/w_1023,h_777,q_75,strp/pokemon_go_fighting_type_background_by_thoritegem_dab816e-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03NzciLCJwYXRoIjoiXC9mXC8zNjIzY2ZiYy00MWE4LTQwZjQtYmQ3Ny0xODQ4MDBmMmJkODFcL2RhYjgxNmUtNzlmODcxNTEtNTA1MC00MWVlLWI1MWEtZGJhOTk3YjRkYTM0LmpwZyIsIndpZHRoIjoiPD0xMDIzIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.0Zz_cOVbrSHMVgIAwgW5bmoUX81-A8xJvw9pxp46jKk);
+    background-image: url(../../images/fightingBgArea.jpg);
     background-size: cover;
 }
 
@@ -622,7 +622,7 @@ a {
 }
 
 .psychicBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/hot-pink-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/psychicBgCard.jpg);
     background-size: cover;
 }
 
@@ -650,7 +650,7 @@ a {
 
 .psychicImagePokemon {
     border: .5em solid #f59;
-    background-image: url(https://pm1.narvii.com/7243/19a53b46a48f55a346f130092cb2c8d8fcf88af0r1-642-671v2_hq.jpg);
+    background-image: url(../../images/psychicBgArea.jpg);
     background-size: cover;
 }
 
@@ -668,7 +668,7 @@ a {
 }
 
 .rockBgCard::before {
-    background-image: url(https://img.freepik.com/premium-photo/matte-with-three-dimensional-print-waves-stripes_158469-5910.jpg);
+    background-image: url(../../images/rockBgCard.png);
     background-size: cover;
 }
 
@@ -696,7 +696,7 @@ a {
 
 .rockImagePokemon {
     border: .5em solid #ba6;
-    background-image: url(https://img.game8.co/3626687/b51becd02a41ea4bedc428ce6e8dcd50.png/show);
+    background-image: url(../../images/rockBgArea.png);
     background-size: cover;
 }
 
@@ -715,7 +715,7 @@ a {
 }
 
 .ghostBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/purple-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/ghostBgCard.jpg);
     background-size: cover;
 }
 
@@ -743,7 +743,7 @@ a {
 
 .ghostImagePokemon {
     border: .5em solid #66b;
-    background-image: url(https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Nebulosas.jpg);
+    background-image: url(../../images/ghostBgArea.jpg);
     background-size: cover;
 }
 
@@ -761,7 +761,7 @@ a {
 }
 
 .iceBgCard::before {
-    background-image: url(https://thumbs.dreamstime.com/b/diagonal-stripes-texture-blue-166470486.jpg);
+    background-image: url(../../images/iceBgCard.jpg);
     background-size: cover;
 }
 
@@ -789,7 +789,7 @@ a {
 
 .iceImagePokemon {
     border: .5em solid #6cf;
-    background-image: url(https://wallpapercave.com/wp/wp11647432.jpg);
+    background-image: url(../../images/iceBgArea.jpg);
     background-size: cover;
 }
 
@@ -807,7 +807,7 @@ a {
 }
 
 .dragonBgCard::before {
-    background-image: url(https://t3.ftcdn.net/jpg/03/87/83/72/360_F_387837272_JUpWis5RJfM4v0pzCK7aog3Nj9bMPSuY.jpg);
+    background-image: url(../../images/dragonBgCard.jpg);
     background-size: cover;
 }
 
@@ -835,7 +835,7 @@ a {
 
 .dragonImagePokemon {
     border: .5em solid #76e;
-    background-image: url(https://thumbs.dreamstime.com/b/religion-concept-heavenly-background-dramatic-clouds-divine-shining-heaven-light-sky-beautiful-cloud-sunshine-peaceful-140871056.jpg);
+    background-image: url(../../images/dragonBgArea.jpg);
     background-size: cover;
 }
 
@@ -853,7 +853,7 @@ a {
 }
 
 .steelBgCard::before {
-    background-image: url(https://img.freepik.com/premium-vector/black-white-abstract-lines-seamless-pattern_87543-223.jpg);
+    background-image: url(../../images/steelBgCard.png);
     background-size: cover;
 }
 
@@ -881,7 +881,7 @@ a {
 
 .steelImagePokemon {
     border: .5em solid #aab;
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/402/1008/6/metal-texture-metal-texture-wallpaper-preview.jpg);
+    background-image: url(../../images/steelBgArea.jpg);
     background-size: cover;
 }
 
@@ -899,7 +899,7 @@ a {
 }
 
 .flyingBgCard::before {
-    background-image: url(https://cdn.vectorstock.com/i/preview-1x/09/32/diagonal-blue-motion-lines-background-vector-42050932.jpg);
+    background-image: url(../../images/flyingBgCard.jpg);
     background-size: cover;
 }
 
@@ -927,7 +927,7 @@ a {
 
 .flyingImagePokemon {
     border: .5em solid #aab;
-    background-image: url(https://images.gamebanana.com/img/ss/mods/61f808313fa1f.jpg);
+    background-image: url(../../images/flyingBgArea.jpg);
     background-size: cover;
 }
 
@@ -945,7 +945,7 @@ a {
 }
 
 .darkBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/black-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/darkBgCard.jpg);
     background-size: cover;
 }
 
@@ -973,7 +973,7 @@ a {
 
 .darkImagePokemon {
     border: .5em solid #754;
-    background-image: url(https://i.pinimg.com/736x/9f/86/7d/9f867dbeead71e9d7ea096a62c3e1d59--dark-blue-wallpaper-blue-wallpapers.jpg);
+    background-image: url(../../images/darkBgArea.jpg);
     background-size: cover;
 }
 
@@ -992,7 +992,7 @@ a {
 }
 
 .unknownBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/black-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/darkBgCard.jpg);
     background-size: cover;
 }
 
@@ -1020,7 +1020,7 @@ a {
 
 .unknownImagePokemon {
     border: .5em solid #707070;
-    background-image: url(https://i.pinimg.com/736x/9f/86/7d/9f867dbeead71e9d7ea096a62c3e1d59--dark-blue-wallpaper-blue-wallpapers.jpg);
+    background-image: url(../../images/darkBgArea.jpg);
     background-size: cover;
 }
 
@@ -1039,7 +1039,7 @@ a {
 }
 
 .shadowBgCard::before {
-    background-image: url(https://www.photos-public-domain.com/wp-content/uploads/2012/07/black-diagonal-striped-plastic-texture.jpg);
+    background-image: url(../../images/darkBgCard.jpg);
     background-size: cover;
 }
 
@@ -1067,7 +1067,7 @@ a {
 
 .shadowImagePokemon {
     border: .5em solid #707070;
-    background-image: url(https://i.pinimg.com/736x/9f/86/7d/9f867dbeead71e9d7ea096a62c3e1d59--dark-blue-wallpaper-blue-wallpapers.jpg);
+    background-image: url(../../images/darkBgArea.jpg);
     background-size: cover;
 }
 
@@ -1129,7 +1129,6 @@ a {
 
 /** CSS for unknown type pokemons **/
 .unknownTypesPokemon { background-color: #ab2; }
-
 
 /** CSS for shadow type pokemons **/
 .shadowTypesPokemon { background-color: rgb(27, 25, 25); }
