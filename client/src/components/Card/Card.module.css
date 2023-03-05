@@ -1060,7 +1060,7 @@ a {
     visibility: visible;
 }
 
-.shadowypeImage {
+.shadowTypeImage {
     background-image: url(../../images/dark.png);
     background-size: cover;
 }
