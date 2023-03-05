@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import style from './NavBar.module.css';
 import SearchBar from "../SearchBar/SearchBar";
+import logoPokemon from '../../images/PokemonLogo.png';
+import style from './NavBar.module.css';
 
 
 const NavBar = ({ setCurrentPage, setLoading }) => {
@@ -9,7 +10,7 @@ const NavBar = ({ setCurrentPage, setLoading }) => {
     return (
         <div className={style.container}>
             <Link to='/'>
-                <img className={style.logoPokemon} src="../../images/PokemonLogo.png" alt="Logo Pokemon" />
+                <img className={style.logoPokemon} src={logoPokemon} alt="Logo Pokemon" />
             </Link>
             <Link className={style.menu} to='/home'>Home</Link>
             <Link className={style.menu} to='/create'>Create a pokemon</Link>
